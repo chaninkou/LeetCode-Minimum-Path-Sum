@@ -22,7 +22,7 @@ public class FindMinimumPathSumFunction {
         
         for(int i = 1; i < n; i++){
             for(int j = 1; j < m; j++){
-            	// Get the minimum sum of two points
+            	// Get the minimum sum of two points ( top or left )
                 dp[i][j] = Math.min(grid[i][j] + dp[i][j - 1], grid[i][j] + dp[i - 1][j]);
             }
         }
